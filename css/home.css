@@ -1,0 +1,41 @@
+#home-menu {
+    min-width: 20em;
+}
+
+#home-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-button-container button {
+    height: 3em;
+    width: 100%;
+    max-width: 10em;
+    border-radius: 1.5em;
+    color: white;
+
+    font-size: 1em;
+    margin: 1em;
+
+    /* border: 1pt solid rgba(0, 0, 0, 0.5) */
+}
+
+#register-button {
+    background-color: darkred;
+}
+
+#leaderboard-button {
+    background-color: darkcyan;
+}
+
+#manual-button {
+    background-color: darkgreen;
+}
+
+#logout-container button {
+    float: right;
+    margin: 1em 1em 0 1em;
+}
+

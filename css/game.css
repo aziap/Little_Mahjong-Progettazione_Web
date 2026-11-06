@@ -1,0 +1,183 @@
+/* 
+    DEBUG:
+    NOTA: cambiato lo schema dei nomi dei selettori degli id: nomeElemento-idGiocatore
+*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+}
+
+#game-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#table {
+    position: relative;
+    margin-left: 2em;
+    float: left;
+    /* margin-left: auto;
+    margin-right: auto; */
+    background-color: #111b53;
+
+    /* DEBUG */
+    /* box-sizing: content-box; */
+
+    border: 2pt solid goldenrod;
+
+    /* box-shadow adattato da https://getcssscan.com/css-box-shadow-examples #25 */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 0px 36px -18px inset;
+}
+
+.hand-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.concealed-zone, .draw-zone, .open-triplet {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.tile {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    /* box-shadow preso da https://getcssscan.com/css-box-shadow-examples #14 */
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+
+    /* box-shadow preso da https://getcssscan.com/css-box-shadow-examples #89 */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.tile.concealed {
+    background-image: url('./img/tile/back.svg');
+}
+
+.tile.selected {
+    box-shadow: inset 0 0 3em 3em rgba(255, 255, 0, 0.4);
+}
+
+#concealed-zone-0 > .tile:hover, #draw-zone-0 > .tile:hover {
+    transform: translateY(-20%);
+}
+
+
+.open-triplet {
+    transform: scale(0.8);
+    transform-origin: 0 0;
+}
+
+.player-section {
+    position: absolute;
+    height: 100%;
+    width: 100%;  
+    bottom: 0;  
+    visibility: hidden;
+}
+
+.player-section * {
+    visibility: visible;
+}
+
+.discard-area {
+    position: absolute;
+    left: 29%;
+    top: 55%;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+}
+
+.discard-area > div {
+    width: 120%;
+}
+
+#call-section {
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 3em 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    
+    width: 30%;
+    height: 100%;
+    /* DEBUG  */
+    border: 2pt solid red;
+    /* END DEBUG  */
+}
+
+#call-section button {
+    visibility: visible;
+    display: block;
+    height: 3em;
+    width: 80%;
+    margin: 1em auto;
+    font-weight: bold;
+}
+
+#message-section {
+    position: absolute;
+    /* DEBUG */
+    display: none;
+    bottom: 0;
+    right: 100%;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    /* END DEBUG */
+}
+
+#player-section-1 {
+    transform: rotate(-180deg);
+}
+
+
+/* Info */
+
+#round-info-wrapper {
+    flex: 0.5 1 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#round-info-wrapper > div {
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    border-radius: 1em;
+}
+
+#info-wall {
+    background-color: chocolate;
+}
+
+.info-player {
+    background-color: brown;
+}
+
+.info-player .wind  {
+    font-weight: bold;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: rgb(4, 1, 16);
+    color: gold;
+    margin: 0 auto;
+    border-radius: 0.5em;
+}
+
+.info-player .name {
+    font-weight: bold;
+}

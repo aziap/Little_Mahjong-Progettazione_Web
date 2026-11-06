@@ -1,0 +1,87 @@
+#result-window {
+    position: absolute;
+    pointer-events: auto !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(30%);
+    margin: 0 auto;
+    min-width: fit-content;
+    min-width: -moz-fit-content;
+    
+    min-height: fit-content;
+    min-height: -moz-fit-content;
+
+    padding: 2em;
+    width: 60%;
+    background-color: #FFFFF0;
+    border-radius: 1em;
+
+    outline: 1em solid  #FFFFF0;
+    border: 0.5em solid goldenrod;
+
+    /* box shadow adattata da:
+    https://getcssscan.com/css-box-shadow-examples 
+    #1 */
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 7px 29px 0px;
+}
+
+#result-window header {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info-content-area, .info-button-area {
+    margin: 1em 0;
+}
+
+.info-content-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#winning-hand-wrapper {
+    /* display: block; */
+    margin: 0.5em auto;
+}
+
+#result-table {
+    display: inline-block;
+    margin: 1em auto;
+    border-collapse: collapse; 
+}
+
+#result-table td {
+    padding: 0.5em 1em;
+    border-bottom: 2pt solid grey;
+}
+
+#result-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* #result-table tr:last-child {
+    background-color: grey;
+} */
+
+#winning-tile-container {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+#player-point-wrapper {
+    display: flex;
+}
+
+#player-point-wrapper p {
+    flex: 1 1 auto;
+    display: inline-block;
+    margin: 0 1em;
+}
+
+
+
+#result-confirm {
+    float: right;
+}

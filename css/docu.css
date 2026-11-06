@@ -1,0 +1,49 @@
+#docu-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#docu-container {
+    width: 80%;
+    margin: 1em auto;
+    background-color: #fffff0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #25282b;
+    text-shadow: #25282b;
+}
+
+figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+figure {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: fit-content;
+    width: -moz-fit-content;
+    height: fit-content;
+    height: -moz-fit-content;
+    padding: 1em;
+}
+
+#mani-vincenti td {
+    padding: 0 1em;
+}
+
+#mani-vincenti tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.24);
+}
+
+#img-onori {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#img-onori figure {
+    flex: 1 1 auto;
+    justify-content: space-around;
+}

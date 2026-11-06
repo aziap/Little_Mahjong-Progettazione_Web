@@ -1,0 +1,2 @@
+Immagini in ./tile: https://github.com/FluffyStuff/riichi-mahjong-tiles
+Favicon: https://favicon.io/
